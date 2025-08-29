@@ -65,6 +65,14 @@ font-family: 'Playfair Display', serif;
     font-size: 3em;
     text-transform: uppercase;
 }
+
+
+.hamburger {
+  display: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
 .hero-section{
     height: 100vh;
     display: flex;
@@ -257,6 +265,8 @@ font-family: 'Playfair Display', serif;
     align-items: center;
     gap: 4em;
     margin: 3em;
+        flex-wrap: wrap;
+
 }
 .card{
     width: 20%;
@@ -267,10 +277,12 @@ font-family: 'Playfair Display', serif;
     background-color: #fff;
     border-radius: 20px;
     overflow: hidden;
+    min-width: 250px;
+    flex-wrap: wrap;
 }
 .card img{
     width: 100%;
-    height: 35vh;
+    height: 25vh;
 }
 .card-text{
     padding: 1em;
@@ -670,6 +682,7 @@ font-family: 'Playfair Display', serif;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-top: 1em;
 }
 
 .footer-newsletter input {
@@ -700,6 +713,105 @@ font-family: 'Playfair Display', serif;
   color: #777;
   font-size: 0.9rem;
 }
+
+
+@media (min-width:768px) and (max-width:1000px){
+  .text-bottom a{
+    display: none;
+  }
+  nav{
+  padding: 0 1.5em;
+}
+nav ul li a{
+  font-size: .7em;
+}
+.hero-text{
+  margin-top: 10em;
+}
+.hero-text h1{
+  font-size: 3em;
+}
+.hero-text p, .text-bottom p, .about-text p{
+  font-size: .9em;
+}
+.hero-text .btn{
+  padding: .7em 1em;
+  font-size: 1em;
+}
+.about-text{
+  padding-left: 2em;
+}
+.notes-section{
+  height: auto;
+}
+}
+@media (max-width:768px){
+  nav{
+    box-sizing: border-box;
+    position: fixed;
+    background-color: black;
+  }
+  nav .logo h1{
+    font-size: 2em;
+  }
+ .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5em;
+    left: 0;
+    background: black;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    width: 100%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+  .hero-text{
+    margin-top: 12em;
+    width: 80%;
+  }
+  .hero-text h1{
+    font-size: 2em;
+  }
+  .hero-text p, .text-bottom p, .about-text p, .notes-container p, .gallery-container p, .reviews-container p, .contact-container p, .footer-container p{
+    font-size: .8em;
+  }
+  .text-bottom .social-buttons{
+    display: none;
+  }
+  .text-bottom{
+    margin-top: 4em;
+  }
+
+  .text-bottom .text{
+    align-items: center;
+    width: 100%;
+    text-align: center;
+  }
+  .text-bottom .text h2{
+    font-size: 1em;
+  }
+  .notes-section{
+    height: auto;
+  }
+  .about-text h2, .reviews-container h2, .gallery-container h2, .notes-container h2, .contact-container h2, .footer-container h2{
+    font-size: 2em;
+  }
+  .footer-container{
+    flex-direction: column;
+  }
+ 
+}
+
 
 
 
